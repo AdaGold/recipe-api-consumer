@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Required due to an incompatibility between TurboLinks and Foundation.
 gem 'jquery-turbolinks'
 
@@ -49,8 +48,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'dotenv-rails'
-  gem 'better_errors'
+
   gem 'minitest-reporters'
+  gem 'simplecov'
+
+  # these must be in this order
+  gem 'minitest-vcr'
+  gem 'webmock'
 end
 
 group :development do
