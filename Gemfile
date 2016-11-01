@@ -50,6 +50,7 @@ group :development, :test do
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'better_errors'
+  gem 'minitest-reporters'
 end
 
 group :development do
