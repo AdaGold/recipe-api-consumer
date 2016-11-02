@@ -41,7 +41,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # API GEMS
 gem 'httparty'
-
+gem 'minitest-vcr'
+gem 'webmock'
 gem 'foundation-rails'
 
 
@@ -50,6 +51,8 @@ group :development, :test do
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'better_errors'
+  gem 'minitest-reporters'
+  gem 'simplecov'
 end
 
 group :development do
