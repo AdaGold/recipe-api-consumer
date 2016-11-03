@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'results/index'
+
+  get 'results/new'
+
+  get 'results/create'
+
+  get 'results/show'
+
+  get 'results/edit'
+
+  get 'results/update'
+
+  get 'results/destroy'
+
   get 'search/new'
 
   get 'search/create'
