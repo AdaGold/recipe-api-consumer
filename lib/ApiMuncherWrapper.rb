@@ -5,6 +5,9 @@ class ApiMuncherWrapper
   APP_ID = 'APP_ID'
   APP_KEY = 'APP_KEY'
 
-  attr_reader :recipe, :query, :url, :image, :returns, :r
-  
+  # from Edamam q = query, r = return
+  attr_reader :recipe, :q, :url, :image, :returns, :r
+  def initialize(recipe, q, url, image, returns, r)
+
+  end
 end
