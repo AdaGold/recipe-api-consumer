@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'recipe/new'
+
+  get 'recipe/update'
+
+  get 'recipe/show'
+
+  get 'recipe/destroy'
+
   get 'results/index'
 
   get 'results/new'
