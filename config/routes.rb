@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   root to: 'search#new'
+  
+  # Search routes
+  get 'search/show'
 
-  # Recipe routes
-  get 'recipe/new'
+  get 'search/new'
 
-  get 'recipe/update'
+  get 'search/create'
 
-  get 'recipe/show'
+  get 'search/update'
 
-  get 'recipe/destroy'
+  get 'search/destroy'
 
   # Results routes
   get 'results/index'
@@ -25,16 +27,13 @@ Rails.application.routes.draw do
 
   get 'results/destroy'
 
-  # Search routes
-  get 'search/new'
+  # Recipe routes
+  get 'recipe/new'
 
-  get 'search/create'
+  get 'recipe/update'
 
-  get 'search/update'
+  get 'recipe/show'
 
-  get 'search/destroy'
+  get 'recipe/destroy'
 
-  get 'search/show'
-
-  
 end
