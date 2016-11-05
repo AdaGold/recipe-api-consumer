@@ -2,8 +2,9 @@ require 'httparty'
 
 class ApiMuncherWrapper
   BASE_URL = "https://api.edamam.com/search"
-  APP_ID = 'APP_ID'
-  APP_KEY = 'APP_KEY'
+  # should this be listed as Token/ id instead/ 
+  APP_ID = ENV['APP_ID']
+  APP_KEY = ENV['APP_KEY']
   
   # https://developer.edamam.com/edamam-docs-recipe-api
   # from Edamam q = query text, r = return of recipe based on it's id
