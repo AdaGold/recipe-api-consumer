@@ -1,6 +1,9 @@
+require "#{Rails.root}/lib/ApiMuncherWrapper.rb"
+# require "#{Rails.root}/lib/recipe.rb"
 class SearchController < ApplicationController
-  
+
   def index
+    @results = ApiMuncherWrapper.get_recipe    
 
   end 
 
