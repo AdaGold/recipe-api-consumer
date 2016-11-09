@@ -63,6 +63,6 @@ Once you've explored the API docs, this project:
 -  Provide checkboxes or other controls to limit the search to options such as:
 	-  Peanut Free
 	-  Soy Free
-	-  High Protien
+	-  High Protein
 	-  Etc
  
