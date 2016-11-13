@@ -4,7 +4,7 @@ class RecipeController < ApplicationController
   end
 
   def show
-
+    puts params[:id]
   end
 
   def destroy
