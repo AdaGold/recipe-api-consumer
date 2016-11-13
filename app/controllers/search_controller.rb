@@ -3,7 +3,11 @@ require "#{Rails.root}/lib/ApiMuncherWrapper.rb"
 class SearchController < ApplicationController
 
   def index
-    @results = ApiMuncherWrapper.get_recipes(params[:search])
+    search = params[:search]
+    from = params[:from]
+
+    @results = ApiMuncherWrapper.get_recipes(search, from)
+
     # puts "!!!!!!!!!!!!!!"
     # puts params.inspect 
     # puts "!!!!!!!!!!!!!!"

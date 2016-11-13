@@ -10,7 +10,7 @@ class ApiMuncherWrapper
 
   def self.get_recipes(query, from=nil)
 
-    url = BASE_URL + "?q=#{query}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}" + "#{from}"
+    url = BASE_URL + "?q=#{query}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}" + "&from=#{from}"
 
     puts "*******" + url + "*******"
     
