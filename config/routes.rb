@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
   # Recipe routes
 
-  get 'recipe/show'
+  get 'recipe/show/:id' => 'recipe#show', as: 'recipe_show'
 
 end
