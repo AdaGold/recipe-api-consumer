@@ -1,10 +1,7 @@
-<!-- search/index?utf8=✓&search=beef&from=10 -->
 <h1>See your Recipes here!</h1>
-
-<%= link_to search_index_path + "?search=fish" + "&from=10" do %>
-Next
-<%# search_index_path + "?search=beef" + "&from=10" %>
-<% end %>
+<%= link_to "Home", root_path %>
+<%= link_to "Prev", @prev_page %>
+<%= link_to "Next", @next_page %>
 
 <br>
 <br>

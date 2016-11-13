@@ -5,27 +5,18 @@ class SearchController < ApplicationController
   def index
     search = params[:search]
     from = params[:from]
-    # from is nil here
+
     if from == nil
       from = 0
+    else 
+      from = from.to_i
     end
-    @results = ApiMuncherWrapper.get_recipes(search, from)
 
-    @foobar = "hello world"
+    @next_page = search_index_path + "?search=#{search}&from=#{from + 10}" 
+    @prev_page = search_index_path + "?search=#{search}&from=#{from - 10}"
+    @results = ApiMuncherWrapper.get_recipes(search, from)
   end 
 
   def new
-  end
-
-  def create
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
-  def show
   end
 end
