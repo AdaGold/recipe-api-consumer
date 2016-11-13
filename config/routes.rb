@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   get 'results/index'
 
   # Recipe routes
-
   get 'recipe/show/:id' => 'recipe#show', as: 'recipe_show'
 
 end
