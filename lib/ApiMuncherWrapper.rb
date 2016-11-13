@@ -6,15 +6,6 @@ class ApiMuncherWrapper
   APP_ID = ENV['app_id']
   APP_KEY = ENV['app_key']
   
-  # https://developer.edamam.com/edamam-docs-recipe-api
-  # from Edamam q = query text, r = return of recipe based on it's id
-  # attr_reader :recipe, :q, :url, :image, :returns, :r
-  # def initialize(recipe, q, url, image, returns, r)
-  #   @recipe = recipe
-  #   @q = q
-  #   @url = url
-  #   @image = image
-  # end
 
   def self.get_recipe
     url = BASE_URL + "?q=bacon&from=0&to=10" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}"
