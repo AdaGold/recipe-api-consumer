@@ -1,10 +1,13 @@
+require "#{Rails.root}/lib/ApiMuncherWrapper.rb"
+
 class RecipeController < ApplicationController
 
   def index
   end
 
   def show
-    puts params[:id]
+    recipe_id = params[:id]
+    @results = ApiMuncherWrapper.get_one_recipe(recipe_id)
   end
 
   def destroy

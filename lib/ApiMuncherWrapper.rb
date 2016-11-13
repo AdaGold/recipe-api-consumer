@@ -40,7 +40,9 @@ class ApiMuncherWrapper
       "?r=http://www.edamam.com/ontologies/edamam.owl%23recipe_#{recipe_id}" +
       "&app_id=#{APP_ID}" +
       "&app_key=#{APP_KEY}"
-    response = HTTParty.get(url)
+    data = HTTParty.get(url)
+
+    puts data.inspect
   end
 end
 
