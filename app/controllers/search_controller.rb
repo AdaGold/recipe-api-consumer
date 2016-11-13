@@ -5,12 +5,13 @@ class SearchController < ApplicationController
   def index
     search = params[:search]
     from = params[:from]
-
+    # from is nil here
+    if from == nil
+      from = 0
+    end
     @results = ApiMuncherWrapper.get_recipes(search, from)
 
-    # puts "!!!!!!!!!!!!!!"
-    # puts params.inspect 
-    # puts "!!!!!!!!!!!!!!"
+    @foobar = "hello world"
   end 
 
   def new

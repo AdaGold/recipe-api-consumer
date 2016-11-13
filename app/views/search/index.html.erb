@@ -1,4 +1,15 @@
+<!-- search/index?utf8=✓&search=beef&from=10 -->
 <h1>See your Recipes here!</h1>
+
+<%= link_to search_index_path + "?search=fish" + "&from=10" do %>
+Next
+<%# search_index_path + "?search=beef" + "&from=10" %>
+<% end %>
+
+<br>
+<br>
+<br>
+
 <% @results.each do |recipe|%>
   <%= link_to recipe[:uri] do %>
     <%= recipe[:name] %><br>
