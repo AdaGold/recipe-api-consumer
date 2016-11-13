@@ -8,6 +8,8 @@ class ApiMuncherWrapper
   
 
   def self.get_recipe
+
+    #url = "#{BASE_URL}search?q=#{search_term}&from=#{start_index}&app_id=#{APP_ID}&app_key#{APP_KEY}"
     url = BASE_URL + "?q=bacon&from=0&to=10" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}"
     data = HTTParty.get(url)
     # return data['hits'][0]['recipe']['label']
