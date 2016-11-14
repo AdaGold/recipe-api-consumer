@@ -1,0 +1,23 @@
+<h1>Recipe details</h1>
+<p>Recipe</p>
+<%= @recipe['label'] %><br><br>
+<% @recipe['ingredientLines'].each do |line| %>
+  <%= line %>
+  <br>
+<% end %>
+<br>
+
+<p>Dietary Information</p>
+<% @recipe['dietLabels'].each do |line| %>
+  <%= line %>
+  <br>
+<% end %>
+<br>
+
+<%= link_to "See The Original Recipe!", @recipe['url'], :target => "_blank" %>
+
+<footer>
+  <p class="attribute"> Powered by Edamam
+    <img src="/assets/edamam_logo.png" alt="Edamam Logo">
+  <p>
+</footer>

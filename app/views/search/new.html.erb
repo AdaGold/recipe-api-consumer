@@ -1,0 +1,13 @@
+<!-- http://www.rymcmahon.com/articles/2 -->
+<h1>Search for Recipes here!</h1>
+ 
+<%= form_tag(search_index_path, :method => 'get', uri: "search-form") do %> 
+  <%= text_field_tag :search, params[:q], placeholder: "Enter your crave!" %>
+  <%= submit_tag "Search", :name => nil %>
+
+<% end %>
+<footer>
+  <p class="attribute"> Powered by Edamam
+    <img src="/assets/edamam_logo.png" alt="Edamam Logo">
+  <p>
+</footer>

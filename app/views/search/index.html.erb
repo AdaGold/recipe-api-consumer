@@ -1,0 +1,27 @@
+<h1>See your Recipes here!</h1>
+<!-- turn this into a partial -->
+<%= link_to "Home", root_path %>
+<%= link_to "Prev", @prev_page %>
+<%= link_to "Next", @next_page %>
+
+<br>
+<br>
+<br>
+
+<% @results.each do |recipe|%>
+  <%# link_to recipe[:uri] do %>
+    <%= recipe[:name] %><br>
+    <%= image_tag(recipe[:pic]) %>
+    <!-- <%# recipe[:uri] %> -->
+  <%# end %>
+  <br>
+  <br>
+  <%= link_to "Recipe Details", recipe_show_path(recipe[:uri].split('_')[1]) %>
+  <br><br><br>
+<% end %>
+
+<footer>
+  <p class="attribute"> Powered by Edamam
+    <img src="/assets/edamam_logo.png" alt="Edamam Logo">
+  <p>
+</footer>
