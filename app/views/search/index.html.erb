@@ -9,11 +9,11 @@
 <br>
 
 <% @results.each do |recipe|%>
-  <%= link_to recipe[:uri] do %>
+  <%# link_to recipe[:uri] do %>
     <%= recipe[:name] %><br>
     <%= image_tag(recipe[:pic]) %>
     <!-- <%# recipe[:uri] %> -->
-  <% end %>
+  <%# end %>
   <br>
   <br>
   <%= link_to "Recipe Details", recipe_show_path(recipe[:uri].split('_')[1]) %>
