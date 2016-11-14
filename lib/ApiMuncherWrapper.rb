@@ -41,8 +41,7 @@ class ApiMuncherWrapper
       "&app_id=#{APP_ID}" +
       "&app_key=#{APP_KEY}"
     data = HTTParty.get(url)
-
-    puts data.inspect
+    return data[0]
   end
 end
 

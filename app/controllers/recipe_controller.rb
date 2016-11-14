@@ -7,7 +7,7 @@ class RecipeController < ApplicationController
 
   def show
     recipe_id = params[:id]
-    @results = ApiMuncherWrapper.get_one_recipe(recipe_id)
+    @recipe = ApiMuncherWrapper.get_one_recipe(recipe_id)
   end
 
   def destroy
