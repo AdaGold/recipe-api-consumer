@@ -1,0 +1,55 @@
+<%@search%>
+<section class="row">
+<section class = "title small-12 large-9" >
+  <h1><%=@search[0]["label"]%></h1>
+  <h3> Full Recipe: <%=link_to @search[0]["source"], (@search[0]["url"])%></h3>
+</section>
+</section>
+<section class="row">
+
+<section class = "image small-12 medium-4 columns">
+  <%=image_tag src=@search[0]["image"]%>
+</section>
+
+<section class="nutrition small-12 medium-8 columns">
+
+    <table>
+      <th>
+
+          <% servings = @search[0]["yield"].to_i%>
+          Serves: <%= servings%>
+        </th>
+        <th>
+          <% cal = @search[0]["calories"].to_i%>
+          <%= cal/servings%> calories per serving
+        </th>
+
+      <%@search[0]["digest"][0..6].each do |item|%>
+      <tr>
+        <td>
+          <%=item["label"]%>
+        </td>
+        <td>
+          <%value = item["total"].to_i%>
+          <%=value/servings%> g
+        </td>
+      </tr>
+    </section>
+    </section>
+      <%end%>
+    </section>
+      <section class="row">
+      <section class= "ingredients small-12 medium-9 column">
+
+    <table>
+      <th> Ingredients</th>
+      <%@search[0]["ingredientLines"].each do |line|%>
+      <tr>
+        <td><%=line%></td>
+      </tr>
+      <%end%>
+    </table>
+  </section>
+
+
+  </table>

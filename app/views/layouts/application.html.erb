@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag "application" %>
+<link href="https://fonts.googleapis.com/css?family=Asul|Comfortaa:300|Kalam:300|Pacifico" rel="stylesheet">    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header id="header" >
+      <section class = "expanded row ">
+        <section class= "small-12 columns">
+        <h1 class="text-center"> <%=link_to "Muncher" , "/"%></h1>
+          <p class="text-center"> eat like you mean it </p>
+        </section>
+      </section>
+    </header>
+    <section>
+      <%if flash%>
+
+      <%=flash[:message]%><br>
+
+      <%end%>
+    </section>
+    <main>
+      <section class="main-container">
+    <%=yield %>
+    <footer>
+      <h5> Powered by Edamam<h5>
+      </footer>
+  </main>
+    </main>
+  </body>
+</html>

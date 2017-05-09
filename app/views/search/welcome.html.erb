@@ -1,0 +1,14 @@
+<section class="landing-container">
+  <span class="search-box">
+    <%=form_tag searches_path, method: :get do %>
+    <%label_tag :query %>
+    <em class="input-group-field">
+    <%=text_field_tag :query %>
+  </em>
+    <%= hidden_field_tag :from, "0"%>
+    <span class="input-group-button">
+    <%=submit_tag "Let's eat!" ,class:"test-button"%>
+  </span>
+    <%end%>
+</span>
+</section>

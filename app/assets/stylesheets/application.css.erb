@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+FONTS IN USE
+ (fancy fun) font-family: 'Pacifico', cursive; , font-family: 'Kalam', cursive;
+
+(clean text) font-family: 'Comfortaa',cursive; font-family: 'Asul', sans-serif;
+
+/*Global*/
+section {margin: 0px; padding:0px;}
+img{margin: 0px,; padding:0px;}
+h1, h2 {font-family: 'Pacifico';}
+h3,h5{font-family:"Comfortaa", sans-serif; }
+.main {margin: 0px;padding: 0px;}
+
+/*Header*/
+p.text-center {font-family: "Kalam",cursive;}
+a.text-center {color:rgba(11, 125, 156, 0.2);text-decoration:none;}
+
+/*Welcome Page*/
+.landing-container{
+  background-image:url(<%= asset_path 'food.jpg' %>);
+  background-size:cover;
+  height:600px;
+ }
+ .input-group-field{
+   padding-top: 14px;
+   margin-top:40px;
+   position: relative;
+   top:15em;
+ }
+
+ .input-group-button{
+   position: relative;
+   top:15em;
+
+ }
+.test-button{background-color: rgba(11, 125, 156, 0.43);color:white;font-style: italic;}
+
+/**/
+/*Index Page*/
+
+
+.query{font-style: italic;}
+nav#arrows {text-align: center;}
+
+.search_result{display: inline-block; margin: 0px;padding:0px;}
+#id{width:100%}
+.index_photo{width: 30em;border-radius: 10px;}
+
+.title{display:inline-block;;min-height:50px;max-width: 300px;}
+a{color: rgba(11, 125, 156, 0.73)}
+
+/*Show Page*/
+.title{color:rgba(11, 125, 156, 0.9);width: 100%:}

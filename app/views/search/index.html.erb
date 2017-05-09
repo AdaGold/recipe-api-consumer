@@ -1,0 +1,36 @@
+<h3> You asked for <em class="query"><%=params[:query]%></em>, here it is....</h3>
+
+<nav id="arrows">
+  <% query = params[:query]%>
+  <%from = @search.from.to_i + 10%>
+
+  <%if @search.from.to_i > 1%>
+  <%back = @search.from.to_i - 10%>
+  <%=link_to "<<--", searches_path( "query"=> query, "from"=> back) %>
+  <%end%>
+
+  <%=link_to "-->>", searches_path( "query"=> query, "from"=> from) %>
+</nav>
+
+<section class="search_results">
+
+  <%@searches.each do |key, recipe|%>
+  <section class="columns offset-2">
+  </section>
+  <section class= "search_result columns small-12 medium-3 large-4">
+
+
+      <h2 class="text-center"><%=link_to recipe["label"], search_path( key, "uri" => recipe["uri"], "from"=> from), class:"index_link" %></h2>
+
+  </section>
+
+  <section="search_img">
+  <%=image_tag src="#{recipe["image"]}", class:"index_photo"%>
+  </section>
+  <!-- </article> -->
+<% uri = @search_object[key.to_i]["uri"]%>
+<% from = @search_object[key.to_i]["from"]%>
+
+<%end%>
+
+</section>

@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=<API_ID>&app_key=<API_KEY>&from=0&q=&to=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Sun, 07 May 2017 18:04:58 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-143-134-250/10.143.134.250
+      Set-Cookie:
+      - JSESSIONID=CF8D4866B6B97C3980E1DCF19A480175; Path=/
+      - JSESSIONID=CF8D4866B6B97C3980E1DCF19A480175; Path=/; Secure; HttpOnly
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "q" : "",
+          "from" : 0,
+          "to" : 10,
+          "params" : {
+            "sane" : [ ],
+            "to" : [ "10" ],
+            "q" : [ "" ],
+            "app_key" : [ "<API_KEY>" ],
+            "app_id" : [ "<API_ID>" ],
+            "from" : [ "0" ]
+          },
+          "more" : false,
+          "count" : 0,
+          "hits" : [ ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 May 2017 18:04:58 GMT
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=<API_ID>&app_key=<API_KEY>&from=0&q=chickena&to=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Sun, 07 May 2017 18:08:11 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-143-134-250/10.143.134.250
+      Set-Cookie:
+      - JSESSIONID=C1263998884294C465FAE4BDAE2C4667; Path=/
+      - JSESSIONID=C1263998884294C465FAE4BDAE2C4667; Path=/; Secure; HttpOnly
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "q" : "chickena",
+          "from" : 0,
+          "to" : 10,
+          "params" : {
+            "sane" : [ ],
+            "to" : [ "10" ],
+            "q" : [ "chickena" ],
+            "app_key" : [ "<API_KEY>" ],
+            "app_id" : [ "<API_ID>" ],
+            "from" : [ "0" ]
+          },
+          "more" : false,
+          "count" : 0,
+          "hits" : [ ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 May 2017 18:08:11 GMT
+recorded_with: VCR 3.0.3
