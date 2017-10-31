@@ -13,12 +13,11 @@
 </head>
 <% unless current_page?(root_path) %>
 <nav>
-  <h2>Muncher</h2>
+  <h2 class="nav">Muncher</h2>
 
   <%= form_tag search_recipe_path, method: :get do %>
-  <%= label_tag(:search, "Find your flavor...") %>
-  <%= text_field_tag(:search) %>
-  <%= submit_tag("Search", class: "button")  %>
+  <section class="search"><%= text_field_tag(:search) %></section>
+  <section class="submit"><%= submit_tag("Search", class: "button nav-button")%></section>
   <% end %>
 </nav>
 <% end %>

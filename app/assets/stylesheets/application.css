@@ -58,7 +58,19 @@ label {
 }
 .submit {
   text-align: center;
-
+}
+/*##########
+# NAV BAR#
+############*/
+.nav {
+  font-size: 70px;
+  text-align: center;
+  font-family:'Josefin Slab', serif;
+  margin-bottom: 0px;
+}
+nav {
+  background-image: url("https://images.unsplash.com/photo-1483137140003-ae073b395549?auto=format&fit=crop&w=1650&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  /*background-size: cover;*/
 }
 /*##########
 # INDEX PAGE#
@@ -70,3 +82,7 @@ label {
 /*##########
 # SHOW PAGE#
 ############*/
+.byline {
+  text-align: center;
+  font-size: 30px;
+}

@@ -3,7 +3,8 @@
 # Link to the original recipe (opens in a new tab)
 # Ingredients
 # Dietary information -->
-<h2><%= @recipe.label %>'s recipe:</h2>
+<h2 class="nav"><%= @recipe.label %>'s recipe:</h2>
+<section class="byline">By: <%= @recipe.source %></section>
 
 <section class="small-8 medium-4 small-centered columns"></section>
 <%= image_tag "#{@recipe.image}", alt:"image"%>
