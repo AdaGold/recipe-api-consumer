@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
 
 body {
@@ -21,6 +23,7 @@ body {
 # ROOT PAGE#
 ############*/
 .homepage-title {
+  font-family:'Josefin Slab', serif;
   text-align: center;
   padding-top: 100px;
   font-size: 100px;
@@ -28,12 +31,15 @@ body {
 }
 .form {
   text-align: center;
-  font-size: 50px;
+  font-size: 90px;
   margin-bottom: 0;
 }
 .search {
+  text-align: center;
   margin: 0;
-  width: 200px
+  padding-left: 250px;
+  padding-right: 250px;
+  /*width: 200px;*/
 }
 .submit {
   text-align: center;
