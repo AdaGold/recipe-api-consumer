@@ -4,8 +4,9 @@
 
   <% @recipes.each do |recipe| %>
   <section class="column">
-    <img src="<%=recipe.image%>" alt="<%=recipe.label%>" ><%= link_to recipe.label, recipe_path(:label => recipe.label, :uri => recipe.uri) %>
+      <%= link_to recipe.label, recipe_path(:label => recipe.label, :uri => recipe.uri) %>
   </section>
   <% end %>
 </article>
+
 <%#= will_paginate @recipes, class: "page-nav row" %>
