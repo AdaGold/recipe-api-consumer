@@ -1,4 +1,4 @@
-require 'httparty'
+require "HTTParty"
 
 class MuncherWrapper
   BASE_URL = "https://api.edamam.com/"
