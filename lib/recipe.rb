@@ -4,7 +4,7 @@ class Recipe
   def initialize(label, uri, options = {})
     raise ArgumentError if label == nil || label == "" || uri == nil || uri == ""
     @label = label
-    @uri = URI.escape(uri)
+    @uri = URI.encode(uri)
 
     @image = options[:image]
     @source = options[:source]

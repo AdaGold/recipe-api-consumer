@@ -11,6 +11,10 @@ class MuncherWrapper
     url = BASE_URL + "search?" + "app_id=#{TOKEN_ID}" + "&app_key=#{TOKEN_KEY}" + "&q=#{search}" + "&to=1000"
     response = HTTParty.get(url).parsed_response
 
+    # unless data["ok"]
+    #   raise ArgumentError.new("Error!")
+    # end
+    
     recipes = []
     if response["hits"]
       response["hits"].each do |recipe|
