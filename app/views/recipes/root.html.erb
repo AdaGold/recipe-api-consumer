@@ -1,3 +1,5 @@
+<section class="background">
+
 <h2 class="homepage-title">MUNCHER</h2>
 
 <%= form_tag search_recipe_path, method: :get do %>
@@ -5,3 +7,4 @@
 <p class="form search"><%= text_field_tag(:search) %></p>
 <p class="submit"><%= submit_tag("Search", class: "button")  %></p>
 <% end %>
+</section>

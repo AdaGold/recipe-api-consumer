@@ -15,6 +15,7 @@ class MuncherWrapper
     # unless response["ok"]
     #   raise ArgumentError.new("Error!")
     # end
+    # if hits are 0?
 
     recipes = []
     if response["hits"]
