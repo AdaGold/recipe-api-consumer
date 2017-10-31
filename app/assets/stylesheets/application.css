@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family:'Josefin Slab', serif;
+}
+/*##########
+# ROOT PAGE#
+############*/
+.homepage-title {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 100px;
+  margin-bottom: 5px;
+}
+.form {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+.search {
+  margin: 0;
+  width: 200px
+}
+.submit {
+  text-align: center;
+
+}
+/*##########
+# INDEX PAGE#
+############*/
+
+/*##########
+# SHOW PAGE#
+############*/
