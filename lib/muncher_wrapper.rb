@@ -11,10 +11,10 @@ class MuncherWrapper
     url = BASE_URL + "search?" + "app_id=#{TOKEN_ID}" + "&app_key=#{TOKEN_KEY}" + "&q=#{search}" + "&to=1000"
     response = HTTParty.get(url).parsed_response
 
-    # unless data["ok"]
+    # unless response["ok"]
     #   raise ArgumentError.new("Error!")
     # end
-    
+
     recipes = []
     if response["hits"]
       response["hits"].each do |recipe|
@@ -38,8 +38,8 @@ class MuncherWrapper
   #   :headers => { 'Content-Type' => 'application/x-www-form-urlencoded' })
   #   return response.success?
   # end
-  def self.getRecipe(uri)
-    url = BASE_URL  "search?"  "app_id=#{TOKEN_ID}"  "&app_key=#{TOKEN_KEY}"  "&r=#{uri}"
+  def self.show_recipe(uri)
+    url = BASE_URL + "search?" + "app_id=#{TOKEN_ID}" + "&app_key=#{TOKEN_KEY}" + "&r=#{uri}"
 
     response = HTTParty.get(url).parsed_response
     if response != nil
@@ -59,5 +59,6 @@ class MuncherWrapper
     end
     return recipe
   end
+
 end
 # "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=gte%20591,%20lte%20722&health=alcohol-free"

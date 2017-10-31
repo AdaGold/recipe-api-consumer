@@ -2,7 +2,7 @@ class Recipe
   attr_reader :label, :uri, :image, :source, :ingredients, :url, :diet_labels, :total_nutrients, :calories
 
   def initialize(label, uri, options = {})
-    raise ArgumentError if label == nil || label == "" || uri == nil || uri == ""
+    # raise ArgumentError if label == nil || label == "" || uri == nil || uri == ""
     @label = label
     @uri = URI.encode(uri)
 

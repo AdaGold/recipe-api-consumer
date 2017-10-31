@@ -3,8 +3,8 @@ require 'recipe'
 require 'muncher_wrapper'
 class RecipesController < ApplicationController
 
-# perhaps move this to a root homepage controller?
-# index
+  # perhaps move this to a root homepage controller?
+  # index
   def root ; end
   # def search
   #   @recipes = MuncherWrapper.find_recipe(search)
@@ -12,12 +12,13 @@ class RecipesController < ApplicationController
 
   def index
     @search = params[:search]
-     recipes = MuncherWrapper.find_recipe(@search)
-    #  @recipes = recipes.paginate(:page => params[:page], :per_page => 10)
+    recipes = MuncherWrapper.find_recipe(@search)
+    @recipes = recipes
+    # .paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
-    @recipe = MuncherWrapper.getRecipe(params[:uri])
+    @recipe = MuncherWrapper.show_recipe(params[:uri])
   end
 
 end

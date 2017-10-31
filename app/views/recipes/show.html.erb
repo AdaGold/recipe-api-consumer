@@ -1,0 +1,16 @@
+<h2>recipe show page</h2>
+<h3><%= @recipe.label %></h3>
+
++  <section class="small-8 medium-4 small-centered columns">
+  <img src="<%= @recipe.image %>" alt="<%= @recipe.label %>" >
+</section>
+
+<section class="small-8 medium-4 small-centered columns">
+  <h4>Ingredients</h4>
+
+  <ul>
+    <% @recipe.ingredients.each do |ingredient| %>
+    <li>
+      <%= ingredient["text"] %>
+    </li>
+    <% end %>
