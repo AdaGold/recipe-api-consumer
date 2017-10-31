@@ -1,12 +1,16 @@
-<h3>Delicious results for '<%= params[:search] %>'</h3>
+<h3>Delicious search results for '<%= params[:search] %>'</h3>
 
 <article class="row small-up-3 medium-up-3 large-up-4">
 
   <% @recipes.each do |recipe| %>
   <section class="column">
-      <%= link_to recipe.label, recipe_path(:label => recipe.label, :uri => recipe.uri) %>
+    <%=link_to recipe_path(:label => recipe.label, :uri => recipe.uri) do %>
+    <%= image_tag recipe.image %>
+    <% end %>
+
+    <%= link_to recipe.label, recipe_path(:label => recipe.label, :uri => recipe.uri) %>
   </section>
   <% end %>
 </article>
 
-<%#= will_paginate @recipes, class: "page-nav row" %>
+<%#= will_paginate @recipes %>

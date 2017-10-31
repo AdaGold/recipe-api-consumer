@@ -1,6 +1,33 @@
-<h2>recipe show page</h2>
-<h3><%= @recipe.label %></h3>
+<!-- # 3- This shall show the details about a given recipe. These details include:
+# Name
+# Link to the original recipe (opens in a new tab)
+# Ingredients
+# Dietary information -->
+<h2><%= @recipe.label %>'s recipe:</h2>
 
 <section class="small-8 medium-4 small-centered columns"></section>
-Picture:
-<%= @recipe.label["image"] %>
+<%= image_tag "#{@recipe.image}", alt:"image"%>
+
+<section class="small-8 medium-4 small-centered columns">
+  <h4>Ingredients</h4>
+  <ul>
+    <% @recipe.ingredients.each do |ingredient| %>
+    <li>
+      <%= ingredient["text"] %>
+    </li>
+    <% end %>
+  </ul>
+</section>
+
+<section class="small-8 medium-4 small-centered columns">
+  <% if @recipe.diet_labels != [] %>
+  <h4>Diet Labels</h4>
+  <ul>
+    <% @recipe.diet_labels.each do |label| %>
+    <li>
+      <%= label %>
+    </li>
+    <% end %>
+  </ul>
+  <% end %>
+</section>

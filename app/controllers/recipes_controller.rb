@@ -10,7 +10,6 @@ class RecipesController < ApplicationController
     @search = params[:search]
     recipes = MuncherWrapper.find_recipe(@search)
     @recipes = recipes
-    # .paginate(:page => params[:page], :per_page => 10)
   end
   # 3- This shall show the details about a given recipe. These details include:
   # Name

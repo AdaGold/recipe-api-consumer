@@ -1,4 +1,5 @@
 require "HTTParty"
+require 'pry'
 
 class MuncherWrapper
   BASE_URL = "https://api.edamam.com/"

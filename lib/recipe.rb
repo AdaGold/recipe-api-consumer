@@ -6,13 +6,13 @@ class Recipe
     @label = label
     @uri = URI.encode(uri)
 
-    @image = options[:image]
-    @source = options[:source]
-    @ingredients = options[:ingredients]
-    @url = options[:url]
-    @diet_labels = options[:diet_labels]
-    @total_nutrients = options[:total_nutrients]
-    @calories = options[:calories]
+    @image = options["image"]
+    @source = options["source"]
+    @ingredients = options["ingredients"]
+    @url = options["url"]
+    @diet_labels = options["diet_labels"]
+    @total_nutrients = options["total_nutrients"]
+    @calories = options["calories"]
   end
 
 end
