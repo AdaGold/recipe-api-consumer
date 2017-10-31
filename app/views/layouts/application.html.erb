@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ApiMuncher</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>ApiMuncher</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<% unless current_page?(root_path) %>
+<nav>
+  <h2>Muncher</h2>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= form_tag search_recipe_path, method: :get do %>
+  <%= label_tag(:search, "Find your flavor...") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search", class: "button")  %>
+  <% end %>
+</nav>
+<% end %>
+<body>
+  <%= yield %>
+</body>
 </html>
