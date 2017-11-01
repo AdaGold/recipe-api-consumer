@@ -4,31 +4,41 @@
 # Ingredients
 # Dietary information -->
 <h2 class="nav"><%= @recipe.label %>'s recipe:</h2>
-<section class="byline">By: <%= @recipe.source %></section>
+<section class="byline">By: <%= link_to "#{@recipe.source}", @recipe.url, target: "_blank" %></section>
 
-<section class="small-8 medium-4 small-centered columns"></section>
-<%= image_tag "#{@recipe.image}", alt:"image"%>
+<div class="row">
+  <div class="pic medium-6 medium-push-6 columns">
+  <!-- <div class="small-8 medium-6 large-5-centered columns"> -->
 
-<section class="small-8 medium-4 small-centered columns">
-  <h4>Ingredients</h4>
-  <ul>
-    <% @recipe.ingredients.each do |ingredient| %>
-    <li>
-      <%= ingredient["text"] %>
-    </li>
+    <!-- <section class="small-8 medium-4 small-centered columns"></section> -->
+    <%= image_tag "#{@recipe.image}", alt:"image"%>
+  </div>
+
+  <!-- <div class="medium-6 large-5 columns"> -->
+  <div class="ingredients medium-6 medium-pull-6 columns">
+    <h4>Ingredients</h4>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+      <li>
+        <%= ingredient["text"] %>
+      </li>
+      <% end %>
+    </ul>
+
+    <% if @recipe.diet_labels != [] %>
+    <h4>Diet Labels</h4>
+    <ul>
+      <% @recipe.diet_labels.each do |label| %>
+      <li>
+        <%= label %>
+      </li>
+      <% end %>
+    </ul>
     <% end %>
-  </ul>
-</section>
-
-<section class="small-8 medium-4 small-centered columns">
-  <% if @recipe.diet_labels != [] %>
-  <h4>Diet Labels</h4>
-  <ul>
-    <% @recipe.diet_labels.each do |label| %>
-    <li>
-      <%= label %>
-    </li>
-    <% end %>
-  </ul>
-  <% end %>
-</section>
+  </div>
+</div>
+<footer>
+<div class="attribution">
+  Powered by Edaman
+</div>
+</footer>

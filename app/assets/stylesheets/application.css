@@ -78,6 +78,8 @@ nav {
 .results {
   text-align: center;
   font-family:'Josefin Slab', serif;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 /*##########
 # SHOW PAGE#
@@ -85,4 +87,23 @@ nav {
 .byline {
   text-align: center;
   font-size: 30px;
+}
+h4 {
+  font-family:'Josefin Slab', serif;
+}
+.ingredients {
+  padding-left: 100px;
+  padding-top: 20px;
+}
+.pic {
+  padding-top: 20px;
+}
+.attribution {
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 10px;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(237, 195, 100, 0.9);
 }
