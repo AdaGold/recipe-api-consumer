@@ -37,11 +37,11 @@ describe "show_recipe" do
   it "returns a recipe successfully" do
 
     VCR.use_cassette("recipes") do
-      all_recipes = MuncherWrapper.find_recipe("chicken")
-      recipe = MuncherWrapper.show_recipe(all_recipes[0].uri)
+      all_chicken = MuncherWrapper.find_recipe("chicken")
+      recipe = MuncherWrapper.show_recipe(all_chicken[0].uri)
 
       recipe.must_be_instance_of Recipe
-      recipe.label.must_equal recipes[0].label
+      recipe.label.must_equal all_chicken[0].label
     end
   end
   # negative test
