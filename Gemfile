@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'HTTParty'
+gem 'httparty'
 gem 'pry'
 gem "omniauth"
 gem "omniauth-github"
