@@ -1,5 +1,5 @@
-require_dependency './lib/muncher_wrapper'
-require_dependency './lib/recipe'
+# require_dependency './lib/muncher_wrapper'
+# require_dependency './lib/recipe'
 # require 'HTTParty'
 # require 'recipe'
 # require 'muncher_wrapper'

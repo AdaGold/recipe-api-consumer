@@ -1,6 +1,5 @@
-require 'HTTParty'
-require 'pry'
-
+# require 'HTTParty'
+# require 'pry'
 class MuncherWrapper
   BASE_URL = "https://api.edamam.com/"
   TOKEN_KEY = ENV["APP_KEY"]
