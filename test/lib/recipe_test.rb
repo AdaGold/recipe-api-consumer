@@ -17,7 +17,6 @@ describe Recipe do
 
   end
 
-
   it "tracks label and uri" do
     label = "test_label"
     uri = "test_uri"
