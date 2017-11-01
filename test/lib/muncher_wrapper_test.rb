@@ -19,14 +19,9 @@ describe MuncherWrapper do
     it "can't search for fake data" do
       VCR.use_cassette("recipes") do
         recipes = MuncherWrapper.find_recipe(".")
-
         recipes.must_equal []
       end
     end
-    # VCR.use_cassette("recipes") do
-    #   proc {
-    #     MuncherWrapper.find_recipe("fake food")
-    #   }.must_raise MuncherWrapper::ArgumentError
   end
 end
 
@@ -50,8 +45,3 @@ describe "show_recipe" do
   end
 
 end
-
-
-
-
-#
