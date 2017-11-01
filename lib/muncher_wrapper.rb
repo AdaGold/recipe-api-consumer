@@ -3,14 +3,9 @@ class MuncherWrapper
   TOKEN_KEY = ENV["APP_KEY"]
   TOKEN_ID = ENV["APP_ID"]
 
-  class ApiError < StandardError
-  end
-
   def self.find_recipe(search, app_id=TOKEN_ID, app_key=TOKEN_KEY)
     url = BASE_URL + "search?" + "app_id=#{app_id}" + "&app_key=#{app_key}" + "&q=#{search}" + "&to=1000"
     response = HTTParty.get(url).parsed_response
-
-    # check_status(response)
 
     recipes = []
     if response["hits"]

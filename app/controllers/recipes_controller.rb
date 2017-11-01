@@ -25,8 +25,6 @@ class RecipesController < ApplicationController
     unless @recipe
       head :not_found
     end
-
   end
-  private
-  # save and flash?
+  
 end
