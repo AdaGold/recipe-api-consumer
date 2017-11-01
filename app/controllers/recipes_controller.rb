@@ -8,8 +8,14 @@ class RecipesController < ApplicationController
   # 2- that list view will show 10 recipe names and an image at a time
   def index
     @search = params[:search]
-    recipes = MuncherWrapper.find_recipe(@search)
-    @recipes = recipes
+    results = MuncherWrapper.find_recipe(@search)
+    if results.empty?
+      flash.now[:error] = "Your search had no results. Try again!"
+      redirect_to root_path
+    else
+      @recipes = results.paginate(:page => params[:page], :per_page => 10)
+      return @recipes
+    end
   end
   # 3- This shall show the details about a given recipe. These details include:
   # Name
