@@ -1,4 +1,4 @@
-require "HTTParty"
+require 'HTTParty'
 require_dependency '../../lib/muncher_wrapper'
 require_dependency '../../lib/recipe'
 # require 'recipe'
