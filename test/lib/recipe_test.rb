@@ -38,13 +38,13 @@ describe Recipe do
     }
     recipe = Recipe.new("label", "uri", options)
 
-    recipe.image.must_equal options[:image]
-    recipe.source.must_equal options[:source]
-    recipe.ingredients.must_equal options[:ingredients]
-    recipe.url.must_equal options[:url]
-    recipe.diet_labels.must_equal options[:diet_labels]
-    recipe.total_nutrients.must_equal options[:total_nutrients]
-    recipe.calories.must_equal options[:calories]
+    recipe.image.must_equal options["image"]
+    recipe.source.must_equal options["source"]
+    recipe.ingredients.must_equal options["ingredients"]
+    recipe.url.must_equal options["url"]
+    recipe.diet_labels.must_equal options["diet_labels"]
+    recipe.total_nutrients.must_equal options["total_nutrients"]
+    recipe.calories.must_equal options["calories"]
   end
 
 end
