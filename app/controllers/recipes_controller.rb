@@ -1,3 +1,6 @@
+require_dependency '../../lib/muncher_wrapper'
+require_dependency '../../lib/recipe'
+
 class RecipesController < ApplicationController
 
   def root ; end
