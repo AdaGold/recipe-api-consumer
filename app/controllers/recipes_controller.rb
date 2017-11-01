@@ -10,7 +10,8 @@ class RecipesController < ApplicationController
     @search = params[:search]
     results = MuncherWrapper.find_recipe(@search)
     if results.empty?
-      flash.now[:error] = "Your search had no results. Try again!"
+      flash[:status] = :failure
+      flash[:message] = "Your search for '#{params[:search]}' had no results. Try again!"
       redirect_to root_path
     else
       @recipes = results.paginate(:page => params[:page], :per_page => 10)
@@ -26,5 +27,17 @@ class RecipesController < ApplicationController
     @recipe_uri = params[:uri]
     @recipe = MuncherWrapper.show_recipe(@recipe_uri)
   end
-
+  private
+  # def save_and_flash(model, edit: "create", save: model.save, name: model.name)
+  #   result = save
+  #   if result
+  #     flash[:status] = :success
+  #     flash[:message] = "Successfully #{edit}d #{model.class} #{name}"
+  #   else
+  #     flash.now[:status] = :failure
+  #     flash.now[:message] = "Could not #{edit} #{model.class}"
+  #     flash.now[:details] = model.errors.messages
+  #     return false
+  #   end
+  # end
 end
