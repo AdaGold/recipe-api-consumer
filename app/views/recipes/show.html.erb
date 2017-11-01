@@ -1,20 +1,13 @@
-<!-- # 3- This shall show the details about a given recipe. These details include:
-# Name
-# Link to the original recipe (opens in a new tab)
-# Ingredients
-# Dietary information -->
+<section class="page">
+
 <h2 class="nav"><%= @recipe.label %>'s recipe:</h2>
 <section class="byline">By: <%= link_to "#{@recipe.source}", @recipe.url, target: "_blank" %></section>
 
 <div class="row">
   <div class="pic medium-6 medium-push-6 columns">
-  <!-- <div class="small-8 medium-6 large-5-centered columns"> -->
-
-    <!-- <section class="small-8 medium-4 small-centered columns"></section> -->
     <%= image_tag "#{@recipe.image}", alt:"image"%>
   </div>
 
-  <!-- <div class="medium-6 large-5 columns"> -->
   <div class="ingredients medium-6 medium-pull-6 columns">
     <h4>Ingredients</h4>
     <ul>
@@ -37,3 +30,5 @@
     <% end %>
   </div>
 </div>
+
+</section>

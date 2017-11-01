@@ -60,6 +60,7 @@ label {
   margin: 0;
   padding-left: 250px;
   padding-right: 250px;
+  min-width: 100px;
   /*width: 200px;*/
 }
 .submit {
@@ -69,7 +70,13 @@ label {
 # NAV BAR#
 ############*/
 .nav {
-  font-size: 70px;
+  font-size: 300%;
+  text-align: center;
+  font-family:'Josefin Slab', serif;
+  margin-bottom: 0px;
+}
+.nav-main {
+  font-size: 500%;
   text-align: center;
   font-family:'Josefin Slab', serif;
   margin-bottom: 0px;
@@ -113,4 +120,7 @@ h4 {
   color: white;
   font-weight: bold;
   background-color: rgba(237, 195, 100, 0.9);
+}
+.page {
+  min-height: 500px;
 }
