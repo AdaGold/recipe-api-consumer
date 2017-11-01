@@ -1,20 +1,16 @@
-# require 'HTTParty'
-# require 'pry'
 class MuncherWrapper
   BASE_URL = "https://api.edamam.com/"
   TOKEN_KEY = ENV["APP_KEY"]
   TOKEN_ID = ENV["APP_ID"]
 
-  # search?q=
+  class ApiError < StandardError
+  end
 
-  def self.find_recipe(search)
-    url = BASE_URL + "search?" + "app_id=#{TOKEN_ID}" + "&app_key=#{TOKEN_KEY}" + "&q=#{search}" + "&to=1000"
+  def self.find_recipe(search, app_id=TOKEN_ID, app_key=TOKEN_KEY)
+    url = BASE_URL + "search?" + "app_id=#{app_id}" + "&app_key=#{app_key}" + "&q=#{search}" + "&to=1000"
     response = HTTParty.get(url).parsed_response
 
-    # unless response["ok"]
-    #   raise ArgumentError.new("Error!")
-    # end
-    # if hits are 0?
+    # check_status(response)
 
     recipes = []
     if response["hits"]
@@ -32,18 +28,11 @@ class MuncherWrapper
     return recipes
   end
 
-  #   response = HTTParty.post(url,
-  #   body:  {
-  #     "q" => "#{search}",
-  #   },
-  #   :headers => { 'Content-Type' => 'application/x-www-form-urlencoded' })
-  #   return response.success?
-  # end
   def self.show_recipe(uri)
     url = BASE_URL + "search?" + "app_id=#{TOKEN_ID}" + "&app_key=#{TOKEN_KEY}" + "&r=#{uri}"
 
     response = HTTParty.get(url).parsed_response
-    if response != nil
+    unless response.empty?
       label = response[0]["label"]
       uri = response[0]["uri"]
       options = {}
@@ -55,11 +44,10 @@ class MuncherWrapper
       options["total_nutrients"] = response[0]["totalNutrients"]
       options["calories"] = response[0]["calories"]
       recipe = Recipe.new(label, uri, options)
+      return recipe
     else
       return nil
     end
-    return recipe
   end
 
 end
-# "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=gte%20591,%20lte%20722&health=alcohol-free"

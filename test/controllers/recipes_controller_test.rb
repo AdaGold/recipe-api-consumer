@@ -45,9 +45,17 @@ describe RecipesController do
         must_respond_with :success
       end
     end
-    ############ need negative test? ######### 
 
+    it "renders :not_found for bad uri" do
+      VCR.use_cassette("show_recipe") do
+        label = "test_label"
+        @uri = "http://www.edamam.com/ontologies/edamam.owl%23recipe_1111111111111"
+        recipe = MuncherWrapper.show_recipe(@uri)
+        recipe.must_equal nil
+        get recipe_path(label: label, uri: @uri)
+        must_respond_with :not_found
+      end
+    end
   end
-
 
 end
