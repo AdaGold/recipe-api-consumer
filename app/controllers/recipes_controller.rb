@@ -1,9 +1,3 @@
-# require_dependency './lib/muncher_wrapper'
-# require_dependency './lib/recipe'
-# require 'HTTParty'
-# require 'recipe'
-# require 'muncher_wrapper'
-
 class RecipesController < ApplicationController
 
   def root ; end
