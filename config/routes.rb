@@ -5,4 +5,14 @@ Rails.application.routes.draw do
   get '/recipes', to: 'recipes#index', as: 'search_recipe'
   #
   get 'recipes/:label', to: 'recipes#show', as: 'recipe'
+
+  get "/auth/:provider/callback", to: "sessions#create"
+
+
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+  resources :sessions, only: [:create, :destroy]
+
+  # /auth/google_oauth2
+
 end
