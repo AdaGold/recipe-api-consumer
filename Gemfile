@@ -52,6 +52,7 @@ group :development, :test do
   gem "omniauth"
   gem 'omniauth-google-oauth2'
 
+
 end
 
 group :development do
