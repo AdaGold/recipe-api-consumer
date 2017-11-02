@@ -17,7 +17,7 @@
         </li>
         <% end %>
       </ul>
-      
+
       <h4>Dietary Information</h4>
       <% unless @recipe.diet_labels == [] %>
       <ul>
@@ -25,14 +25,14 @@
         <li><%= label %></li>
         <% end %>
         <% end %>
-        <li>Calories: <%= @recipe.calories.round(0) %></li>
+        <li>Total Calories: <%= @recipe.calories.round(0) %></li>
         <li>Serving Size: <%= @recipe.yield.round(0) %></li>
       </ul>
 
     </div>
 
     <div class="ingredients medium-6 medium-pull-6 columns">
-      <% if @recipe.total_nutrients != [] %>
+      <% unless @recipe.total_nutrients == [] %>
       <table id="table">
         <h4>Nutrition Information</h4>
         <% @recipe.total_nutrients.each do |nutrient| %>
