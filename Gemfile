@@ -38,8 +38,8 @@ gem "omniauth"
 gem "omniauth-github"
 gem 'will_paginate'
 gem 'foundation-rails', '6.4.1.2'
-gem 'omniauth'
-gem 'omniauth-google_oauth2'
+# gem 'omniauth'
+# gem 'omniauth-google_oauth2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -50,8 +50,8 @@ group :development, :test do
   gem 'minitest-vcr'
   gem 'webmock'
   gem 'dotenv-rails'
-  # gem "omniauth"
-  # gem 'omniauth-google-oauth2'
+  gem "omniauth"
+  gem 'omniauth-google-oauth2'
 
 
 end
