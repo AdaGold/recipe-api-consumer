@@ -14,9 +14,9 @@ class MuncherWrapper
         uri = recipe["recipe"]["uri"]
         options = {}
         options["image"] = recipe["recipe"]["image"]
-        options["url"] = recipe["recipe"]["url"]
-        options["source"] = recipe["recipe"]["source"]
-        options["ingredients"] = recipe["recipe"]["ingredients"]
+        # options["url"] = recipe["recipe"]["url"]
+        # options["source"] = recipe["recipe"]["source"]
+        # options["ingredients"] = recipe["recipe"]["ingredients"]
         recipes << Recipe.new(label, uri, options)
       end
     end
