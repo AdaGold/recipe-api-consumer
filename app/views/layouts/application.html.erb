@@ -9,6 +9,7 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+  <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon" %>
   <%= csrf_meta_tags %>
 </head>
 <% unless current_page?(root_path) %>
