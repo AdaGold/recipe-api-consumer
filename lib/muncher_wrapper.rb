@@ -36,6 +36,7 @@ class MuncherWrapper
       options["source"] = response[0]["source"]
       options["ingredients"] = response[0]["ingredients"]
       options["diet_labels"] = response[0]["dietLabels"]
+      options["yield"] = response[0]["yield"]
       options["total_nutrients"] = response[0]["totalNutrients"]
       options["calories"] = response[0]["calories"]
       recipe = Recipe.new(label, uri, options)
