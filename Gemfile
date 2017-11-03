@@ -38,6 +38,9 @@ gem "omniauth"
 gem "omniauth-github"
 gem 'will_paginate'
 gem 'foundation-rails', '6.4.1.2'
+gem "omniauth"
+
+gem 'omniauth-google-oauth2'
 # gem "omniauth"
 # gem "omniauth-google_oauth2"
 
