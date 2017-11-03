@@ -8,8 +8,9 @@ describe User do
 
     it "returns an instance of user" do
       user = users(:ada)
-      user_instance = User.from_auth_hash(mock_auth_hash(user))
-      
+      auth_hash = mock_auth_hash(user)
+      user_instance = User.from_auth_hash(auth_hash)
+
       user_instance.must_be_instance_of User
     end
   end

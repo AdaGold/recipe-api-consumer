@@ -12,6 +12,7 @@ describe RecipesController do
 
   end
 
+
   describe "index" do
     it "shows the search result of search" do
       search = "lemon"
