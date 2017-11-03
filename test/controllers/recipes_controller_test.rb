@@ -38,10 +38,10 @@ describe RecipesController do
     it "shows a particular recipe page" do
       VCR.use_cassette("show_recipe") do
         label = "test_label"
-        @uri = "http://www.edamam.com/ontologies/edamam.owl%23recipe_637913ec61d9da69eb451818c3293df2"
-        recipe = MuncherWrapper.show_recipe(@uri)
+        uri = "http://www.edamam.com/ontologies/edamam.owl%23recipe_637913ec61d9da69eb451818c3293df2"
+        recipe = MuncherWrapper.show_recipe(uri)
         recipe.must_be_kind_of Recipe
-        get recipe_path(label: label, uri: @uri)
+        get recipe_path(label: label, uri: uri)
         must_respond_with :success
       end
     end
@@ -49,11 +49,21 @@ describe RecipesController do
     it "renders :not_found for bad uri" do
       VCR.use_cassette("show_recipe") do
         label = "test_label"
-        @uri = "http://www.edamam.com/ontologies/edamam.owl%23recipe_1111111111111"
-        recipe = MuncherWrapper.show_recipe(@uri)
+        uri = "http://www.edamam.com/ontologies/edamam.owl%23recipe_1111111111111"
+        recipe = MuncherWrapper.show_recipe(uri)
         recipe.must_equal nil
-        get recipe_path(label: label, uri: @uri)
+        get recipe_path(label: label, uri: uri)
         must_respond_with :not_found
+      end
+    end
+  end
+  describe "nutrition" do
+    it "brings user to nutrition info" do
+      VCR.use_cassette("nutrition") do
+        label = "test_label"
+        uri = "http://www.edamam.com/ontologies/edamam.owl%23recipe_637913ec61d9da69eb451818c3293df2"
+        get nutrition_path(label: label, uri: uri)
+        must_respond_with :success
       end
     end
   end
