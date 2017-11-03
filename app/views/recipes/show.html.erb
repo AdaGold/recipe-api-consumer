@@ -29,20 +29,10 @@
         <li>Serving Size: <%= @recipe.yield.round(0) %></li>
       </ul>
 
-    </div>
-
-    <div class="ingredients medium-6 medium-pull-6 columns">
       <% unless @recipe.total_nutrients == [] %>
-      <table id="table">
-        <h4>Nutrition Information</h4>
-        <% @recipe.total_nutrients.each do |nutrient| %>
-        <tr>
-          <th><%= nutrient[1]["label"]%></th>
-          <td><%= nutrient[1]["quantity"].to_i %><%= nutrient[1]["unit"]%></td>
-        </tr>
-        <% end %>
-      </table>
+      <h4><%= link_to "Nutrition Info", nutrition_path(:label => @recipe.label, :uri => @recipe.uri) %></h4>
       <% end %>
     </div>
+
   </div>
 </section>

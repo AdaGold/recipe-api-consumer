@@ -26,5 +26,10 @@ class RecipesController < ApplicationController
       head :not_found
     end
   end
-  
+
+  def nutrition
+    @recipe_uri = params[:uri]
+    @recipe = MuncherWrapper.show_recipe(@recipe_uri)
+  end
+
 end

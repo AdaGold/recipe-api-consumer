@@ -9,7 +9,6 @@ describe SessionsController do
       must_redirect_to root_path
       session[:user_id].must_equal  user.id
       User.count.must_equal start_count
-
     end
   end
 

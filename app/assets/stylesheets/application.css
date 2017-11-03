@@ -132,3 +132,13 @@ td {
   column-count: 4;
   column-gap: 20px;
 }
+/*##########
+# NUTRTION PAGE#
+############*/
+#table {
+  width: 50%;
+  margin-left: 25%;
+}
+td {
+  text-align: center;
+}
