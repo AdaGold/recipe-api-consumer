@@ -12,7 +12,4 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
   resources :sessions, only: [:create, :destroy]
 
-  # /auth/google_oauth2
-
-
 end
