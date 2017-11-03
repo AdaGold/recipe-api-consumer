@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   #
   get 'recipes/:label', to: 'recipes#show', as: 'recipe'
 
-  get "/auth/:provider/callback", to: "sessions#create"
+  get "/auth/:provider/callback", to: "sessions#create", as: 'login'
 
 
   get 'auth/failure', to: redirect('/')

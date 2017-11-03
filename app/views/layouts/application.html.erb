@@ -12,14 +12,16 @@
   <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon" %>
   <%= csrf_meta_tags %>
 </head>
+
 <div class="attribution">
   <% if current_user %>
   Signed in as <strong><%= current_user.name %></strong>!
-  <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  <%= link_to "Sign out", signout_path %>
   <% else %>
-  <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+  <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
   <% end %>
 </div>
+
 <% unless current_page?(root_path) %>
 <nav>
   <h2 class="nav-main"><%= link_to "Muncher", root_path %></h2>
