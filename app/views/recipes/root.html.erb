@@ -1,0 +1,27 @@
+<section class="background">
+  <% if flash[:message] %>
+  <section class="row status <%= flash[:status] %>">
+    <h3><%= flash[:status] == :failure ? "A problem occurred: " : "" %><%= flash[:message] %></h3>
+    <% if flash[:details] %>
+    <ul>
+      <% flash[:details].each do |name, problems| %>
+      <% problems.each do |problem| %>
+      <li>
+        <%= name %>: <%= problem %>
+      </li>
+      <% end %>
+      <% end %>
+    </ul>
+    <% end %>
+  </section>
+  <% end %>
+
+
+  <h2 class="homepage-title">MUNCHER</h2>
+
+  <%= form_tag search_recipe_path, method: :get do %>
+  <p class="form"><%= label_tag(:search, "Find your flavor...") %></p>
+  <p class="form search"><%= text_field_tag(:search) %></p>
+  <p class="submit"><%= submit_tag("Search", class: "button")  %></p>
+  <% end %>
+</section>

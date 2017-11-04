@@ -1,0 +1,185 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=&app_key=&q=chicken&to=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Tue, 31 Oct 2017 18:30:48 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '2996'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - '"511d94d0-bb4"'
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\"
+        lang=\"en\">\n\n<head>\n    <title>Error 401 - Edamam</title>\n\n\t<meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=UTF-8\" />\n\t<meta http-equiv=\"Content-Language\"
+        content=\"en\" />\n\t<meta http-equiv=\"Content-Style-Type\" content=\"text/css\"
+        />\n\t\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"
+        />\n\n\t<meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1.0,
+        maximum-scale=1.0, width=device-width\">\n\n\t<meta name=\"description\" content=\"Finding
+        recipes just got easier. Edamam has over 1 million recipes from more than
+        500 sites\"/>\n\t<meta name=\"keywords\" content=\"edamam, recipes, food,
+        nutritions, ingredients, calories, servings\"/>\n\n\t<meta name=\"robots\"
+        content=\"all,index,follow\" />\n\t<meta name=\"googlebot\" content=\"index,follow,noodp\"
+        />\n\t<meta name=\"msnbot\" content=\"all,index,follow\" />\n\t\n\t<meta name=\"verify-v1\"
+        content=\"Google Webmaster tools\" />\n\t<meta name=\"verify-v1\" content=\"Yahoo
+        Site Explorer\" />\n\t<meta name=\"verify-v1\" content=\"MSN Webmaster Center\"
+        />\n\t\n\t<meta name=\"SKYPE_TOOLBAR\" content=\"SKYPE_TOOLBAR_PARSER_COMPATIBLE\"
+        />\n\n\t<link type=\"image/x-icon\" rel=\"icon\" href=\"/favicon.ico\" />\n\t<link
+        type=\"image/x-icon\" rel=\"shortcut icon\" href=\"/favicon.ico\" />\n\t\n\t<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/css/general.css\" />\n\n\t<script
+        type=\"text/javascript\" src=\"/js/jquery-1.8.1.min.js\"></script>\n\t<script
+        type=\"text/javascript\" src=\"/js/general.js\"></script>\n\t<!--[if lt IE
+        9]><script type=\"text/javascript\" src=\"/js/html5shiv.js\"></script><![endif]-->\n\t<!--[if
+        IE]><script type=\"text/javascript\" src=\"/js/ie.js\"></script><![endif]-->\n\t<script
+        type=\"text/javascript\">\n\t\t/* ................. Variables */\n\t\tvar
+        totalSpaces, objectsNum, objectsSpace, minHeight;\n\n\t\t/* .................
+        Functions */\n\t\tfunction logoPosition() {\n\t\t\tvar logo = $(\"#head\").outerHTML();\n\t\t\n\t\t\tif
+        (vPortW <= 1024) {\n\t\t\t\tif ($(\"#main #head\").exists()) {\n\t\t\t\t\t$(\"#head\").remove();\n\t\t\t\t\t$(\".header-inner
+        .group-1\").prepend(logo);\n\t\t\t\t}\n\t\t\t}\n\t\t\telse {\n\t\t\t\tif ($(\".header-inner
+        #head\").exists()) {\n\t\t\t\t\t$(\"#head\").remove();\n\t\t\t\t\t$(\"#main\").prepend(logo);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\tfunction
+        elements() {\n\t\t\tminHeight = $(\"header\").height() + $(\"#head\").height()
+        + $(\"#search-box\").height() + $(\"#error-txt\").height() + $(\"footer\").height();\t\t\n\t\t\tif
+        (vPortW > 1024) {objectsNum = 8} else {objectsNum = 4}\n\t\t\tobjectsSpace
+        = objectsNum*25;\n\t\t}\n\t\t\n\t\tfunction setSpaces() {\n\t\t\ttotalSpaces
+        = vPortH - minHeight;\n\t\t\t\n\t\t\tif (vPortH > minHeight + objectsSpace)
+        {$(\"#head, #search-box, #error-txt\").css(\"margin-top\", parseInt(totalSpaces
+        / objectsNum));}\n\t\t\telse {$(\"#head, #search-box, #error-txt\").css(\"margin-top\",
+        \"40px\");}\n\t\t}\n\t\n\t\tjQuery(document).ready(function() {\n\t\t\t\n\t\t\t$(\"body\").css(\"min-height\",
+        minHeight + objectsSpace);\n\t\t\t\n\t\t\tlogoPosition(); elements(); setSpaces();\n\t\t\t\n\t\t\t$(window).resize(function()
+        {\n\t\t\t\tlogoPosition(); elements(); setSpaces();\n\t\t\t});\n\t\t\t\n\t\t});\n\t</script>\n</head>\n\n<body
+        id=\"page-404\" class=\"tmpl-main sub-error\">\n\t<div id=\"general\">\n\t\t<header
+        class=\"gradient grd-header cf\">\n\t\t\t<div class=\"header-inner\">\n\t\t\t\t<div
+        class=\"group-1\">\n\t\t\t\t\t&nbsp;\n\t\t\t\t</div><!-- /group-1 -->\n\t\t\t\t\n\t\t\t\t<div
+        class=\"group-2\">\n\t\t\t\t\t<div id=\"header-menu\">\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li
+        class=\"bloggers\">\n\t\t\t\t\t\t\t\t<div class=\"menu-open\"><span class=\"holder\"><span
+        class=\"lbl\">For Bloggers</span></span></div>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div
+        class=\"layout\">\n\t\t\t\t\t\t\t\t\t<div class=\"white-box\">\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"holder small-pad\">\n\t\t\t\t\t\t\t\t\t\t\t<a class=\"seal\" href=\"/seal/\">Edamam
+        Seal</a>\n\t\t\t\t\t\t\t\t\t\t\t<a class=\"widget last\" href=\"/widget/\">Nutritional
+        Widget</a>\n\t\t\t\t\t\t\t\t\t\t</div><!-- /holder -->\n\t\t\t\t\t\t\t\t\t</div><!--
+        /white-box -->\n\t\t\t\t\t\t\t\t</div><!-- /layout -->\n\t\t\t\t\t\t\t</li><!--
+        /bloggers -->\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<li class=\"about\">\n\t\t\t\t\t\t\t\t<div
+        class=\"menu-open\"><span class=\"holder\"><span class=\"lbl\">About</span></span></div>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div
+        class=\"layout\">\n\t\t\t\t\t\t\t\t\t<div class=\"white-box\">\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"holder small-pad\">\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"/about/company.jsp\"
+        class=\"company\">Company</a>\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"/about/media.jsp\"
+        \  class=\"media\">Media</a>\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"/about/terms.jsp\"
+        \  class=\"terms\">Terms</a>\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"/about/privacy.jsp\"
+        class=\"privacy last\">Privacy</a>\n\t\t\t\t\t\t\t\t\t\t</div><!-- /holder
+        -->\n\t\t\t\t\t\t\t\t\t</div><!-- /white-box -->\n\t\t\t\t\t\t\t\t</div><!--
+        /layout -->\n\t\t\t\t\t\t\t</li><!-- /about -->\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div><!--
+        /header-menu -->\n\t\t\t\t</div><!-- /group-2 -->\n\t\t\t</div><!-- /header-inner
+        -->\n\t\t</header>\n\t\t\n\t\t<section>\n\t\t\t<div id=\"main\">\n\t\t\t\t<div
+        id=\"head\">\n\t\t\t\t\t<a id=\"site-logo\" href=\"/\">Edamam</a>\n\t\t\t\t\t<span
+        id=\"site-slogan\" class=\"txt-n12a col-666 shd-1-1-0-FFF\">Eat better!</span>\n\t\t\t\t</div><!--
+        /head -->\n\n\t\t\t\t<div id=\"error-txt\">\n\t\t\t\t\t<p class=\"txt-n20g
+        col-FF8400 align-c pl10 pr10 pb10\">Oh, no! You seem to have wandered into
+        a food desert! <br>You must be hungry...</p>\n\t\t\t\t</div><!-- /error-txt
+        -->\n\n\t\t\t\t<div id=\"search-box\">\n\t\t\t\t\t<form id=\"search-form\"
+        action=\"/recipes/\">\n\t\t\t\t\t\t<div id=\"search-line\">\n\t\t\t\t\t\t\t<div
+        class=\"holder\">\n\t\t\t\t\t\t\t\t<div class=\"inner-holder cf\">\n\t\t\t\t\t\t\t\t\t<a
+        href=\"javascript:;\" class=\"x-button\" id=\"search-field-clear-btn\">Clear</a>\n\t\t\t\t\t\t\t\t\t<div
+        class=\"field\">\n\t\t\t\t\t\t\t\t\t\t<input id=\"search-field\" value=\"\"
+        type=\"text\" class=\"l\" placeholder=\"Hungry for...\" name=\"q\">\n\t\t\t\t\t\t\t\t\t\t<div
+        id='autocomplete' class='suggestions'>\n\t\t\t\t\t\t\t\t\t\t\t<div class='box'>\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t</div><!--
+        /box -->\n\t\t\t\t\t\t\t\t\t\t</div><!-- /autocomplete -->\n\t\t\t\t\t\t\t\t\t</div><!--
+        /field -->\n\t\t\t\t\t\t\t\t\t<div id=\"search-btn\"><input id=\"search-button\"
+        class=\"btn\" type=\"submit\" name=\"\" value=\"\"></div>\n\t\t\t\t\t\t\t\t</div><!--
+        /inner-holder -->\n\t\t\t\t\t\t\t</div><!-- /holder -->\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<a
+        href=\"javascript:;\" id=\"search-filters-key\" class=\"on\">Filters</a>\n\t\t\t\t\t\t</div><!--
+        /search-line -->\n\t\t\t\t\n\t\t\t\t\t\t<div id=\"search-filters\" class=\"cf\">\n\t\t\t\t\t\t\t<div
+        id=\"filter\">\n\t\t\t\t\t\t\t\t<div class=\"hover\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"filter-label\" rel=\"search-filters\" href=\"javascript:;\"><div class=\"inner
+        txt-n10a shd-1-1-0-FFF col-666 uppercase\"><span class=\"lbl\">refine search
+        by</span> <strong class=\"titles\">Calories and Diet</strong></div></div>\n\t\t\t\t\t\t\t\t\t<div
+        class=\"white-box\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"inner small-pad\">\n\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"search-filter-groups\" class=\"cf\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div id=\"search-filter-cals\"
+        class=\"filter-group lst-links\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"lbl\">Calories</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"calories\">Under
+        200 cal/serv</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\"
+        value=\"lte 200\" name=\"calories\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"calories\">200
+        - 400 cal/serv</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\"
+        value=\"gte 200, lte 400\" name=\"calories\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"calories\">400
+        - 600 cal/serv</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\"
+        value=\"gte 400, lte 600\" name=\"calories\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"calories\">Over
+        600 cal/serv</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\"
+        value=\"gte 600\" name=\"calories\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t</div><!--
+        /search-filter-cals -->\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"search-filter-diet\" class=\"filter-group lst-links\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<span
+        class=\"lbl\">Diet</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Balanced</label>    <input type=\"checkbox\" id=\"diet-balanced\"
+        \    value=\"balanced\"     name=\"diet\">\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Dairy-Free</label>  <input type=\"checkbox\" id=\"diet-dairy-free\"
+        \  value=\"dairy-free\"   name=\"health\"></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Gluten-Free</label> <input type=\"checkbox\" id=\"diet-gluten-free\"
+        \ value=\"gluten-free\"  name=\"health\"></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>High-Fiber</label>  <input type=\"checkbox\" id=\"diet-high-fiber\"
+        \  value=\"high-fiber\"   name=\"diet\">\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>High-Protein</label><input type=\"checkbox\" id=\"diet-high-protein\"
+        value=\"high-protein\" name=\"diet\">  </li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Low-Carb</label>    <input type=\"checkbox\" id=\"diet-low-carb\"
+        \    value=\"low-carb\"     name=\"diet\">\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Low-Fat</label>     <input type=\"checkbox\" id=\"diet-low-fat\"
+        \     value=\"low-fat\"      name=\"diet\">\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Low-Sodium</label>  <input type=\"checkbox\" id=\"diet-low-sodium\"
+        \  value=\"low-sodium\"   name=\"diet\">\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Low-Sugar</label>   <input type=\"checkbox\" id=\"diet-low-sugar\"
+        \   value=\"low-sugar\"    name=\"health\"></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Vegan</label>       <input type=\"checkbox\" id=\"diet-vegan\"
+        \       value=\"vegan\"        name=\"health\"></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        class=\"itm\"><label>Vegetarian</label>  <input type=\"checkbox\" id=\"diet-vegetarian\"
+        \  value=\"vegetarian\"   name=\"health\"></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t</div><!--
+        /search-filter-diet -->\n\t\t\t\t\t\t\t\t\t\t\t</div><!-- /search-filter-groups
+        -->\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"search-filter-actions\"
+        class=\"btn cf\">\n\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"clear-selection x-link
+        clr-link\">Clear Filters</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t<span
+        id=\"set-filters\" class=\"inp-btn btn-green done-filters\"><span>Done</span></span>\n\t\t\t\t\t\t\t\t\t\t\t</div><!--
+        /search-filter-actions -->\n\t\t\t\t\t\t\t\t\t\t</div><!-- /inner -->\n\t\t\t\t\t\t\t\t\t</div><!--
+        /white-box -->\n\t\t\t\t\t\t\t\t</div><!-- /hover -->\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<a
+        href=\"javascript:;\" class=\"clear-selection x-button\">Clear Filters</a>\n\t\t\t\t\t\t\t</div><!--
+        /filter -->\n\t\t\t\t\t\t</div><!-- /search-filters -->\n\t\t\t\t\t</form><!--
+        /search-form -->\n\t\t\t\t</div><!-- /search-box -->\n\t\t\t</div><!-- /main
+        -->\n\t\t</section>\n\t\t\n\t\t<footer class=\"cf bgc-F2F2F2\">\n\t\t\t<div
+        class=\"group-1\">\n\t\t\t\t<div id=\"footer-networks\">\n\t\t\t\t\t<span
+        class=\"lbl txt-n10a col-666 shd-1-1-0-FFF uppercase\">Follow us:</span>\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li
+        class=\"pinterest\"><a target=\"_blank\" href=\"http://pinterest.com/edamam\">Pinterest</a></li>\n\t\t\t\t\t\t<li
+        class=\"facebook\"><a target=\"_blank\" href=\"http://facebook.com/Edamam\">Facebook</a></li>\n\t\t\t\t\t\t<li
+        class=\"twitter\"><a target=\"_blank\" href=\"http://twitter.com/#!/EdamamCo\">Twitter</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div><!--
+        /footer-networks -->\n\t\t\t</div><!-- /group-1 -->\n\t\t\t\n\t\t\t<div class=\"group-2\">\n\t\t\t\t<div
+        id=\"footer-apps\">\n\t\t\t\t\t<span class=\"lbl txt-n10a col-666 shd-1-1-0-FFF
+        uppercase\"><span>Download the Edamam </span>Apps:</span>\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li
+        class=\"ios\"><a target=\"itunes_store\" href=\"http://itunes.apple.com/us/app/edamam/id516902296?mt=8&uo=4\">Edamam
+        for iOS</a></li>\n\t\t\t\t\t\t<li class=\"android\"><a target=\"_blank\" href=\"http://play.google.com/store/apps/details?id=com.edamam.recipesearch\">Edamam
+        for Android</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div><!-- /footer-apps -->\n\t\t\t</div><!--
+        /group-2 -->\n\t\t</footer>\n\t</div><!-- /general -->\n</body>\n\n</html>"
+    http_version: 
+  recorded_at: Tue, 31 Oct 2017 18:30:48 GMT
+recorded_with: VCR 3.0.3

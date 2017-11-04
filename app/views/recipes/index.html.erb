@@ -1,0 +1,18 @@
+<h2 class="results">Results for "<%= params[:search].capitalize %>"</h2>
+
+<article class="row small-up-3 medium-up-3 large-up-4">
+
+  <% @recipes.each do |recipe| %>
+  <section class="column">
+    <%=link_to recipe_path(:label => recipe.label, :uri => recipe.uri) do %>
+    <%= image_tag recipe.image %>
+    <% end %>
+
+    <%= link_to recipe.label, recipe_path(:label => recipe.label, :uri => recipe.uri) %>
+  </section>
+  <% end %>
+</article>
+
+<section class="row">
+  <%= will_paginate @recipes, class: "row" %>
+</section>

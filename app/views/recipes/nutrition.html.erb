@@ -1,0 +1,13 @@
+<h3 class="submit"><%= @recipe.label %>'s <br /> Nutritional Information</h3>
+  <p class="submit"><%= link_to "Back to the Ingredients", recipe_path(:label => @recipe.label, :uri => @recipe.uri) %></p>
+
+<table id="table">
+  <% @recipe.total_nutrients.each do |nutrient| %>
+  <tr>
+    <th><%= nutrient[1]["label"]%></th>
+    <td><%= nutrient[1]["quantity"].to_i %><%= nutrient[1]["unit"]%></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+</div>

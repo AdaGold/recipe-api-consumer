@@ -1,0 +1,38 @@
+<section class="page">
+
+  <h2 class="nav"><%= @recipe.label %>'s recipe:</h2>
+  <section class="byline">By: <%= link_to "#{@recipe.source}", @recipe.url, target: "_blank" %></section>
+
+  <div class="row">
+    <div class="pic medium-6 medium-push-6 columns">
+      <%= image_tag "#{@recipe.image}", alt:"image"%>
+    </div>
+
+    <div class="ingredients medium-6 medium-pull-6 columns">
+      <h4>Ingredients</h4>
+      <ul>
+        <% @recipe.ingredients.each do |ingredient| %>
+        <li>
+          <%= ingredient["text"] %>
+        </li>
+        <% end %>
+      </ul>
+
+      <h4>Dietary Information</h4>
+      <% unless @recipe.diet_labels == [] %>
+      <ul>
+        <% @recipe.diet_labels.each do |label| %>
+        <li><%= label %></li>
+        <% end %>
+        <% end %>
+        <li>Total Calories: <%= @recipe.calories.round(0) %></li>
+        <li>Serving Size: <%= @recipe.yield.round(0) %></li>
+      </ul>
+
+      <% unless @recipe.total_nutrients == [] %>
+      <h4><%= link_to "Nutrition Info", nutrition_path(:label => @recipe.label, :uri => @recipe.uri) %></h4>
+      <% end %>
+    </div>
+
+  </div>
+</section>

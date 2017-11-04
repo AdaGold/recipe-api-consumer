@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "Num-Num" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+  <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<div class="attribution">
+  <% if current_user %>
+  Signed in as <strong><%= current_user.name %></strong>!
+  <%= link_to "Sign out", signout_path %>
+  <% else %>
+  <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
+  <% end %>
+</div>
+
+<% unless current_page?(root_path) %>
+<nav>
+  <h2 class="nav-main"><%= link_to "Muncher", root_path %></h2>
+
+  <%= form_tag search_recipe_path, method: :get do %>
+  <section class="search"><%= text_field_tag(:search) %></section>
+  <section class="submit"><%= submit_tag("Search", class: "button nav-button")%></section>
+  <% end %>
+</nav>
+<% end %>
+
+<body>
+
+  <%= yield %>
+
+</body>
+<footer>
+  <div class="attribution">
+    Powered by Edaman
+  </div>
+
+</footer>
+</html>
