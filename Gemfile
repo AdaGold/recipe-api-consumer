@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
@@ -87,3 +87,4 @@ end
 gem 'httparty'
 gem 'bootstrap', '~> 4.1.3'
 gem 'awesome_print'
+gem 'will_paginate','~>3.1.0'
