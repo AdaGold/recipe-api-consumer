@@ -27,3 +27,6 @@
 /config/master.key
 
 .env
+
+# Edamam API example JSON
+edamam_json.html
