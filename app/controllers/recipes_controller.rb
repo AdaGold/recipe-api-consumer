@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = EdamamApiWrapper.list_recipes(params[:search_term])
+    @recipes = EdamamApiWrapper.list_recipes(params[:message])
+    #binding.pry
   end
 
 

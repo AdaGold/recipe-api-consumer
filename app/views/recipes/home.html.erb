@@ -3,8 +3,8 @@
 
 
 <%= form_tag recipes_index_path, method: :get do %>
- <%= label_tag(:search_term, "Enter search term") %>
- <%= text_field_tag(:search_term) %>
+ <%= label_tag(:message, "Enter search term") %>
+ <%= text_field_tag(:message) %>
  <%= submit_tag("Send") %>
 
 <% end %>
