@@ -1,15 +1,15 @@
 class Recipe
-attr_reader :name, :ingredients, :dietaryinformation, :image_url, :recipe_url, :uri
+attr_reader :label, :ingredients, :dietaryinformation, :image_url, :recipe_url, :uri
 
-def initialize(name, id, options = {} )
+def initialize(label, uri, image_url, recipe_url)
   raise ArgumentError if name == nil || name == "" || id == nil || id == ""
 
-  @name = name
-  @id = id
-  @uri = hit[recipe]["uri"]
-  @dietaryinformation = hit[recipe]["healthLabels"]
-  @ingredients = hit[recipe]["ingredientLines"]
+  @label = label
+  @uri = uri
+  @image_url= image_url
+  @recipe_url = recipe_url
+  @dietaryinformation = dietaryinformation
+  @ingredients = ingredients
 
-  @image_url= options[:is_archived]
-  @recipe_url = options[:members]
+
 end
