@@ -1,5 +1,8 @@
 class RecipesController < ApplicationController
 
+  # def new
+  # end
+
   def index
     # If search q is not empty
     if params[:q].present?
