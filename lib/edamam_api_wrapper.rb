@@ -2,8 +2,8 @@ require 'httparty'
 
 class EdamamApiWrapper
   BASE_URL = "https://api.edamam.com/search"
-  APP_ID = ENV[EDAMAM_APP_ID]
-  APP_KEYS = ENV[EDAMAM_APP_KEYS]
+  APP_ID = ENV["EDAMAM_APP_ID"]
+  APP_KEYS = ENV["EDAMAM_APP_KEYS"]
 
   def self.search(search_term)
     search_url = BASE_URL + "?q=#{search_term}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEYS}&from=0&to=30"
