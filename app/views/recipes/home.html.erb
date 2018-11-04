@@ -1,0 +1,6 @@
+<section class = "recipe-search-form">
+  <%= form_tag(recipes_path, method: "get", id: "search-form") do %>
+    <%= text_field_tag :q, params[:q], placeholder: "Search by Ingredient" %>
+    <%= submit_tag "Search" %>
+  <% end %>
+</section>

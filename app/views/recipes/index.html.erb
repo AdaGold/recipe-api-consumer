@@ -1,0 +1,12 @@
+<section class = 'recipe-search-results'>
+  <!-- <% if params[:q].present? %> -->
+  <% if !@recipes.empty %>
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li><%=link_to(recipe.label, recipe_path(recipe.uri))%></li>
+    <% end %>
+  </ul>
+  <% else %>
+    <p>There were no recipes found containing the term(s) <%= params[:q] %>.</p>
+  <% end %>
+</section>
