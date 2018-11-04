@@ -6,6 +6,7 @@ class Recipe
 
     @label = label
     @uri = uri
+
     @image_url= image_url
     @recipe_url = recipe_url
     @dietaryinformation = dietaryinformation

@@ -1,0 +1,15 @@
+<h1> <%=@recipe.label%></h1>
+<a href ="<%= @recipe.recipe_url%>" target="_blank" class "recipe-card-link">
+<img src="<%=@recipe.image_url%>" alt="picture of <%=@recipe.label%>"></a>
+<h3> Ingredients </h3>
+<ul>
+<%@recipe.ingredients.each do |ingredient|%>
+<li> <%=ingredient%></li>
+<%end%>
+</ul>
+
+<h3> Dietary Labels</h3>
+<ul>
+<%@recipe.dietaryinformation.each do |diet|%>
+<li> <%=diet%></li>
+<%end%>

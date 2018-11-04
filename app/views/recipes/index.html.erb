@@ -1,3 +1,9 @@
+<h1> Recipes for <%="#{params[:message]}"%> </h1>
+<section>
+<ul>
 <%@recipes.each do |recipe|%>
-<%=recipe.label%>
+  <a href ="<%= recipe_show_path(recipe.uri)%>" class "recipe-card-link">
+    <li><%=recipe.label%></li>
+    <li> <img src="<%=recipe.image_url%>" alt="picture of food recipe"></a>
 <%end%>
+</ul>
