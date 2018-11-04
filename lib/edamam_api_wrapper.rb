@@ -15,49 +15,43 @@ class EdamamApiWrapper
         # move to private method?
         wrapped_hit = Recipe.new(
           hit["recipe"]["uri"],
-          hit["recipe"]["label"]
-          hit["recipe"]["image"]
-          hit["recipe"]["source"]
-          hit["recipe"]["url"]
-          hit["recipe"]["yield"]
-          hit["recipe"]["ingredientLines"]
+          hit["recipe"]["label"],
+          hit["recipe"]["image"],
+          hit["recipe"]["source"],
+          hit["recipe"]["url"],
+          hit["recipe"]["yield"],
+          hit["recipe"]["ingredientLines"],
           hit["recipe"]["healthLabels"]
         )
 
         search_results << wrapped_hit
-    end
+      end # of each loop
+    end # of if
 
     return search_results
-  end
+  end # of def search
 
 
   def self.show_details(recipe_uri)
-    recipe_url = BASE_URL
+    url = BASE_URL + "?q=#{search_term}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEYS}&from=0&to=30"
 
-    response = HTTParty.get(
+    response = HTTParty.get(url)
 
-    if response
+    if response["hits"]
         # move instantiation to private method?
         recipe = Recipe.new(
           response["uri"],
-          response["label"]
-          response["image"]
-          response["source"]
-          response["url"]
-          response["yield"]
-          response["ingredientLines"]
+          response["label"],
+          response["image"],
+          response["source"],
+          response["url"],
+          response["yield"],
+          response["ingredientLines"],
           response["healthLabels"]
         )
 
         return recipe
     end
-
   end
 
-# private
-#
-#   self.create_recipe(api_params)
-#     return Recipe.new(
-#       hits[recipe][uri]
-#     )
-end
+end # of Class
