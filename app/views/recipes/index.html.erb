@@ -2,7 +2,7 @@
   <% if !@recipes.empty? %>
   <ul>
     <% @recipes.each do |recipe| %>
-      <li><%=link_to(recipe.recipe_name, recipe_path(recipe.uri))%></li>
+      <li><%=link_to(recipe.recipe_name, recipe_path( recipe.id))%></li>
     <% end %>
   </ul>
   <% else %>

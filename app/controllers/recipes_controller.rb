@@ -14,7 +14,7 @@ class RecipesController < ApplicationController
 
   def show
     # Show one recipe's details page
-    @recipe = EdamamApiWrapper.show_details(params[:recipe_id])
+      @recipe = EdamamApiWrapper.show_details(params[:recipe_id])
   end
 
 end

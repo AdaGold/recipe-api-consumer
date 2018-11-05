@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # get 'recipes/index', to: 'recipes#index', as: 'index'
   # get 'recipe', to: 'recipes#show', as: 'show'
 
-  resources :recipes
+  resources :recipes 
 end
 
 
