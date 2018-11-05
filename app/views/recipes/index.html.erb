@@ -1,9 +1,8 @@
 <section class = 'recipe-search-results'>
-  <!-- <% if params[:q].present? %> -->
-  <% if !@recipes.empty %>
+  <% if !@recipes.empty? %>
   <ul>
     <% @recipes.each do |recipe| %>
-      <li><%=link_to(recipe.label, recipe_path(recipe.uri))%></li>
+      <li><%=link_to(recipe.recipe_name, recipe_path(recipe.uri))%></li>
     <% end %>
   </ul>
   <% else %>
