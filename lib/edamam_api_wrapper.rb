@@ -1,6 +1,6 @@
 require 'httparty'
 require 'awesome_print'
-require 'pry'
+
 
 
 class EdamamApiWrapper
@@ -16,7 +16,7 @@ class EdamamApiWrapper
     recipes = []
     if data["hits"]
       data["hits"].map do |hit|
-      
+
         recipes << make_recipe(hit["recipe"])
       end
       return recipes
@@ -48,7 +48,7 @@ def self.find_recipe(uri)
 
   api_url = BASE_URL + "search?&app_id=#{APP_ID}&app_key=#{APP_KEY}" + "&r=#{RETURN_RECIPE}#{uri}"
   data = HTTParty.get(api_url)
-  #binding.pry
+
   if data[0]
     make_recipe(data[0])
   else
