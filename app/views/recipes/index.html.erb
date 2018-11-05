@@ -1,18 +1,25 @@
-<section class = 'recipe-search-results'>
-  <% if !@recipes.empty? %>
-    <div class ="card-columns">
-      <% @recipes.each do |recipe| %>
+<header>
+  <h1 class = "header-text">MUNCHER</h1>
+  <img src="http://img.werecipes.com/wp/wp-content/uploads/2015/04/aloo-poha-recipe-ingredients.jpg" alt="bowls of ingredients">
+</header>
 
-          <div class = "card recipe-card">
-            <%= image_tag recipe.image, alt: recipe.name, class: "card-img-top" %>
-            <%=link_to(recipe.name, recipe_path( recipe.id))%>
-          </div>
+<main>
+  <section class = 'recipe-search-results'>
+    <% if !@recipes.empty? %>
+      <div class ="card-columns">
+        <% @recipes.each do |recipe| %>
 
-      <% end %>
-    </div>
-  <% else %>
-    <p>There were no recipes found containing the term(s) <%= params[:q] %>.</p>
-  <% end %>
+            <div class = "card recipe-card">
+              <%= image_tag recipe.image, alt: recipe.name, class: "card-img-top" %>
+              <%=link_to(recipe.name, recipe_path( recipe.id))%>
+            </div>
 
-  <%= will_paginate @recipes %>
-</section>
+        <% end %>
+      </div>
+    <% else %>
+      <p>There were no recipes found containing the term(s) <%= params[:q] %>.</p>
+    <% end %>
+
+    <%= will_paginate @recipes %>
+  </section>
+</main>

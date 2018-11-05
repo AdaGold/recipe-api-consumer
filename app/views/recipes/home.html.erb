@@ -1,6 +1,14 @@
-<section class = "recipe-search-form">
-  <%= form_tag(recipes_path, method: "get", id: "search-form") do %>
-    <%= text_field_tag :q, params[:q], placeholder: "Search by Ingredient" %>
-    <%= submit_tag "Search" %>
-  <% end %>
-</section>
+
+<header>
+  <h1 class = "header-text">MUNCHER</h1>
+  <img src="http://img.werecipes.com/wp/wp-content/uploads/2015/04/aloo-poha-recipe-ingredients.jpg" alt="bowls of ingredients">
+</header>
+
+<main>
+  <section class = "recipe-search-form">
+    <%= form_tag(recipes_path, method: "get", id: "search-form") do %>
+      <%= text_field_tag :q, params[:q], placeholder: "Search by Ingredient" %>
+      <%= submit_tag "Search" %>
+    <% end %>
+  </section>
+</main>
