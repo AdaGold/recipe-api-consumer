@@ -32,7 +32,7 @@ class EdamamApiWrapper
   end # of def search
 
 
-  def self.show_details(recipe_id)
+  def self.find_details(recipe_id)
     # url = BASE_URL + "?q=#{search_term}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEYS}&from=0&to=30"
     url = BASE_URL + "?r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23" + "recipe_#{recipe_id}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEYS}"
 
