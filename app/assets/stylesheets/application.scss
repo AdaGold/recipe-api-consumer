@@ -45,6 +45,8 @@ header img:not(.show-header-img) {
   height: 50%;
   opacity: 0.5;
   background-size: cover;
+  position: absolute;
+  z-index: 0;
 }
 
 .header-text {
