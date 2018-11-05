@@ -32,24 +32,25 @@ class EdamamApiWrapper
   end # of def search
 
 
-  def self.show_details(recipe_uri)
-    url = BASE_URL + "?q=#{search_term}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEYS}&from=0&to=30"
+  def self.show_details(recipe_id)
+    # url = BASE_URL + "?q=#{search_term}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEYS}&from=0&to=30"
+    url = BASE_URL + "?r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23" + "recipe_#{recipe_id}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEYS}"
 
     response = HTTParty.get(url)
 
-    if response["hits"]
+    if response[0]
         # move instantiation to private method?
         recipe = Recipe.new(
-          response["uri"],
-          response["label"],
-          response["image"],
-          response["source"],
-          response["url"],
-          response["yield"],
-          response["ingredientLines"],
-          response["healthLabels"]
+          response[0]["uri"],
+          response[0]["label"],
+          response[0]["image"],
+          response[0]["source"],
+          response[0]["url"],
+          response[0]["yield"],
+          response[0]["ingredientLines"],
+          response[0]["healthLabels"]
         )
-
+        # without [0] gave "no implicit conversion of string into integar" error. why need index if only one?
         return recipe
     end
   end
