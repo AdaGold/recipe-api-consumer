@@ -11,6 +11,26 @@
   </head>
 
   <body>
+    <% if flash.any? %>
+  <section class='alert__container'>
+    <% flash.each do |name, message| %>
+    <% if name == 'warning' || name == 'success' %>
+    <div class="alert alert-<%= name %> text-center">
+      <span><%= message %></span>
+      <% if flash[:message] %>
+      <ul>
+        <% flash[:message].each do |message|%>
+        <li class="error-list text-center">
+          <%= message %>
+        </li>
+        <%end%>
+      </ul>
+      <% end %>
+    </div>
+    <% end %>
+    <%end%>
+  </section>
+  <% end%>
     <%= yield %>
   </body>
   <div id="edamam-badge" data-color="white"></div>

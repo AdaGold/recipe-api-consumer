@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
     @recipes = EdamamApiWrapper.list_recipes(params[:message])
     binding
     if @recipes.empty?
-      flash[:error] = "No Recipes found for #{params[:message]}. Please refine your search."
+      flash[:warning] = "No Recipes found for #{params[:message]}. Please refine your search."
       redirect_back fallback_location: root_path
    else
      #binding.pry
