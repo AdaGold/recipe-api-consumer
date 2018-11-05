@@ -16,8 +16,7 @@ class EdamamApiWrapper
     recipes = []
     if data["hits"]
       data["hits"].map do |hit|
-        #binding.pry
-        #binding.pry
+      
         recipes << make_recipe(hit["recipe"])
       end
       return recipes

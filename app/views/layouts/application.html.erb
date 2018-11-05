@@ -10,7 +10,25 @@
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
+
   <body>
+    <header class="app-header__header">
+    <h1>
+      <a href="/">Recipe Search</a>
+
+      <small> Find your flavor</small>
+    </h1>
+
+    <section class="search_box">
+    <%= form_tag recipes_index_path, method: :get do %>
+     <%= label_tag(:message, "Enter search term") %>
+     <%= text_field_tag(:message) %>
+     <%= submit_tag("Send") %>
+   </section>
+
+    <% end %>
+  </header>
+
     <% if flash.any? %>
   <section class='alert__container'>
     <% flash.each do |name, message| %>

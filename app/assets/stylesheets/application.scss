@@ -16,3 +16,53 @@
 @import "bootstrap";
 /* Import scss content */
 @import "**/*";
+
+.app-header__header {
+   max-width: 100%;
+   background-color: #B2DFDB;
+   margin-bottom: 0.5rem;
+   padding: 2rem 1rem 0.5rem 1rem;
+}
+.app-header__header h1 a {
+   color: #FF5722;
+   padding-right: 25px;
+   margin-right: 15px;
+   border-right: white 2px solid;
+}
+
+.app-header__header h1 {
+   text-align: center;
+   margin: 25px auto 40px auto;
+}
+
+.app-header__header h1 small {
+   color: white;
+}
+
+.search_box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  text-align: center;
+  margin: 25px auto 40px auto;
+}
+
+body {
+   margin: 0;
+   font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #212529;
+   text-align: left;
+   background-color: #fff;
+}
+
+.recipe-pagination {
+    background: transparent;
+    text-align: center;
+    padding: 1em;
+    cursor: default;
+    margin-top: 2em;
+    font-size: 30px;
+}
