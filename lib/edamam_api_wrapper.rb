@@ -32,7 +32,11 @@ class EdamamApiWrapper
   end
 
   def self.make_recipe(data_source)
-    uri = format_uri(data_source["uri"])
+    if (data_source["uri"]).include? "_"
+      uri = format_uri(data_source["uri"])
+    else
+      uri = data_source["uri"]
+    end
     image_url = data_source["image"]
     recipe_url = data_source["url"]
     label = data_source["label"]
