@@ -1,0 +1,22 @@
+<section class = "recipe-details">
+  <h1><%= @recipe.name %></h1>
+  <p>Servings: <%= @recipe.servings %> </p>
+  <p><%= image_tag @recipe.image, alt: @recipe.name%></p>
+  <p></strong>Full Recipe: <%= link_to @recipe.source, @recipe.url, target: :_blank %></p>
+
+  <p><strong>Ingredients: </strong></p>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient %></li>
+      <% end %>
+    </ul>
+
+  <p><strong>Dietary Information:</strong>
+    <ul>
+      <% @recipe.health_labels.each do |health_label| %>
+        <li><%= health_label %></li>
+      <% end %>
+    </ul>
+  </p>
+
+</section>
