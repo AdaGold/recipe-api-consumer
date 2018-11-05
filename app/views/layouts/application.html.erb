@@ -7,9 +7,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
   <body>
     <%= yield %>
   </body>
+  <div id="edamam-badge" data-color="white"></div>
 </html>

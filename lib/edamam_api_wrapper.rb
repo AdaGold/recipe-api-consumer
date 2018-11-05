@@ -11,11 +11,12 @@ class EdamamApiWrapper
 
 
   def self.list_recipes(search_term)
-    url = BASE_URL + "search?q=#{search_term}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+    url = BASE_URL + "search?q=#{search_term}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=100"
     data = HTTParty.get(url)
     recipes = []
     if data["hits"]
       data["hits"].map do |hit|
+        #binding.pry
         #binding.pry
         recipes << make_recipe(hit["recipe"])
       end

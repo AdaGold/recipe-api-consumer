@@ -13,7 +13,7 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-gem 'kaminari'
+#gem 'kaminari'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -88,4 +88,4 @@ end
 gem 'httparty'
 gem 'bootstrap', '~> 4.1.3'
 gem 'awesome_print'
-gem 'will_paginate','~>3.1.0'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
