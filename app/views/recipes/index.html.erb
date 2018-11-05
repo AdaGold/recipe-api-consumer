@@ -8,4 +8,6 @@
   <% else %>
     <p>There were no recipes found containing the term(s) <%= params[:q] %>.</p>
   <% end %>
+
+  <%= will_paginate @recipes %>
 </section>

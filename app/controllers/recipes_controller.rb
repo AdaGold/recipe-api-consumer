@@ -1,3 +1,6 @@
+require 'will_paginate'
+require 'will_paginate/array'
+
 class RecipesController < ApplicationController
 
   # def new
@@ -8,8 +11,7 @@ class RecipesController < ApplicationController
     if params[:q].present?
       # recipes is the list of recipes from the EdamamAPIWrapper
       # Show only 10 per page
-      @recipes = EdamamApiWrapper.search(params[:q])
-      #.paginate(page: params[:page], per_page: 10)
+      @recipes = EdamamApiWrapper.search(params[:q]).paginate(page: params[:page], per_page: 10)
     end
   end
 
