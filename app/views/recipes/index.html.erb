@@ -1,10 +1,15 @@
 <section class = 'recipe-search-results'>
   <% if !@recipes.empty? %>
-    <ul>
+    <!-- <ul> -->
       <% @recipes.each do |recipe| %>
-        <li><%=link_to(recipe.name, recipe_path( recipe.id))%></li>
+      <div class ="card-columns">
+          <div class = "card recipe-card">
+            <%= image_tag recipe.image, alt: recipe.name, class: "card-img-top" %>
+            <%=link_to(recipe.name, recipe_path( recipe.id))%>
+          </div>
+      </div>
       <% end %>
-    </ul>
+
   <% else %>
     <p>There were no recipes found containing the term(s) <%= params[:q] %>.</p>
   <% end %>

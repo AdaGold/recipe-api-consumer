@@ -16,3 +16,19 @@
 @import "bootstrap";
 /* Import scss content */
 @import "**/*";
+
+main {
+  margin: 25px;
+}
+
+header, footer {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.card {
+  width: 18rem;
+  margin: 5px;
+}
